@@ -91,7 +91,7 @@ const initProject = () => {
 		}
 		]
 	}
-	};`);
+};`);
 	fs.writeFileSync('./.env', `MORALIS_CLI_SECRET_PROD=<insert>
 MORALIS_CLI_KEY=<insert>
 MORALIS_CLI_SECRET=<insert>
