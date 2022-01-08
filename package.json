@@ -1,7 +1,7 @@
 {
 	"name": "moralis-cc-ts-cli",
 	"description": "Creates a Moralis CloudCode Typescript Environment",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"license": "MIT",
 	"bin": {
 		"moralis-cc-ts-cli": "index.js",
