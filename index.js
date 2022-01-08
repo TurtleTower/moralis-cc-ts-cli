@@ -31,10 +31,10 @@ const initProject = () => {
 		"scripts": {
 		  "build": "npx webpack",
 		  "webpack-watch": "npx webpack -w",
-		  "dev:watch-logs": "npx moralis-admin-cli get-logs --moralisApiKey $(grep MORALIS_CLI_KEY  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET  .env | cut -d '=' -f2)",
-		  "dev:cloud-upload": "npx moralis-admin-cli watch-cloud-folder --moralisApiKey $(grep MORALIS_CLI_KEY  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET  .env | cut -d '=' -f2) --moralisSubdomain subdomain.moralis.io --autoSave 1 --moralisCloudfolder ./dist/",
-		  "prod:watch-logs": "npx moralis-admin-cli get-logs --moralisApiKey $(grep MORALIS_CLI_KEY  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET  .env | cut -d '=' -f2)",
-		  "prod:cloud-upload": "npx moralis-admin-cli watch-cloud-folder --moralisApiKey $(grep MORALIS_CLI_KEY  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET  .env | cut -d '=' -f2) --moralisSubdomain subdomain.moralis.io --autoSave 1 --moralisCloudfolder ./dist/"
+		  "prod:watch-logs": "npx moralis-admin-cli get-logs --moralisApiKey $(grep MORALIS_CLI_KEY_PROD  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET_PROD  .env | cut -d '=' -f2)",
+		  "prod:cloud-upload": "npx moralis-admin-cli watch-cloud-folder --moralisApiKey $(grep MORALIS_CLI_KEY_PROD  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET_PROD  .env | cut -d '=' -f2) --moralisSubdomain subdomain.moralis.io --autoSave 1 --moralisCloudfolder ./dist/",
+		  "dev:watch-logs": "npx moralis-admin-cli get-logs --moralisApiKey $(grep MORALIS_CLI_KEY_DEV  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET_DEV  .env | cut -d '=' -f2)",
+		  "dev:cloud-upload": "npx moralis-admin-cli watch-cloud-folder --moralisApiKey $(grep MORALIS_CLI_KEY_DEV  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET_DEV  .env | cut -d '=' -f2) --moralisSubdomain subdomain.moralis.io --autoSave 1 --moralisCloudfolder ./dist/"
 		},
 		"dependencies": {
 		  "moralis": "0.0.183"
@@ -93,9 +93,9 @@ const initProject = () => {
 	}
 };`);
 	fs.writeFileSync('./.env', `MORALIS_CLI_SECRET_PROD=<insert>
-MORALIS_CLI_KEY=<insert>
-MORALIS_CLI_SECRET=<insert>
-MORALIS_CLI_KEY=<insert>`);
+MORALIS_CLI_KEY_PROD=<insert>
+MORALIS_CLI_SECRET_DEV=<insert>
+MORALIS_CLI_KEY_DEV=<insert>`);
 	console.log("Creating files");
 	execSync('mkdir src');
 	execSync('mkdir src/user');
