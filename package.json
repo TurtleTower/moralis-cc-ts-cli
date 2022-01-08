@@ -1,0 +1,41 @@
+{
+	"name": "moralis-cc-ts-cli",
+	"description": "Creates a Moralis CloudCode Typescript Environment",
+	"version": "0.0.2",
+	"license": "MIT",
+	"bin": {
+		"moralis-cc-ts-cli": "index.js",
+		"init": "index.js"
+	},
+	"author": {
+		"name": "hello@projectbay.io",
+		"email": "hello@projectbay.io",
+		"url": "https://www.github.com/TurtleTower"
+	},
+	"keywords": [
+		"moralis-cc-ts-cli",
+		"moralis",
+		"typescript",
+		"hello@projectbay.io"
+	],
+	"files": [
+		"index.js",
+		"utils"
+	],
+	"scripts": {
+		"format": "prettier --write \"./**/*.{js,json}\""
+	},
+	"dependencies": {
+		"chalk": "^5.0.0",
+		"cli-alerts": "^1.2.2",
+		"cli-handle-error": "^4.4.0",
+		"cli-handle-unhandled": "^1.1.1",
+		"cli-meow-help": "^2.0.2",
+		"cli-welcome": "^2.2.2",
+		"meow": "^9.0.0",
+		"prompt-sync": "^4.2.0"
+	},
+	"devDependencies": {
+		"prettier": "^2.5.1"
+	}
+}
