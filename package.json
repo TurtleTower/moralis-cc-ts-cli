@@ -1,7 +1,7 @@
 {
 	"name": "moralis-cc-ts-cli",
 	"description": "Creates a Moralis CloudCode Typescript Environment",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"license": "MIT",
 	"bin": {
 		"moralis-cc-ts-cli": "index.js",
@@ -22,6 +22,9 @@
 		"index.js",
 		"utils"
 	],
+	"repository": {
+		"url": "https://github.com/TurtleTower/moralis-cc-ts-cli.git"
+	},
 	"scripts": {
 		"format": "prettier --write \"./**/*.{js,json}\""
 	},
